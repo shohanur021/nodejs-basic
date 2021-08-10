@@ -1,0 +1,19 @@
+const School = require('./school');
+
+const school = new School();
+
+// register a listener for bellRing event
+school.on('bellRing', ({ period, text }) => {
+    console.log(`We need to run because ${period} ${text}`);
+});
+
+school.startPeriod();
+
+
+// console.log(school.eventNames())
+
+// console.log(school.getMaxListeners())
+
+// console.log(school.listenerCount('bellRing'))
+
+
